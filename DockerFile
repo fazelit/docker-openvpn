@@ -1,0 +1,12 @@
+FROM ubuntu
+MAINTAINER fazel fouladi
+
+WORKDIR /home
+
+RUN apt update
+RUN apt install wget
+RUN wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+
+RUN chmod +x openvpn-install.sh
+
+CMD [ "bash","openvpn-install.sh" ]
