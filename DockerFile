@@ -11,4 +11,4 @@ RUN chmod +x openvpn-install.sh
 
 EXPOSE 1194
 
-ENTRYPOINT [ "/bin/bash","openvpn-install.sh" ]
+CMD [ "/bin/bash" ]
