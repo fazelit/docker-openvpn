@@ -5,9 +5,12 @@ WORKDIR /root
 
 RUN apt update
 RUN apt install wget -y
-RUN wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+RUN wget https://git.io/vpn -O openvpn-install.sh
 
-RUN chmod +x openvpn-install.sh
+RUN mv openvpn-install.sh /usr/bin/openvpn-install
+
+RUN chmod +x /usr/bin/openvpn-install
+
 
 EXPOSE 1194
 
