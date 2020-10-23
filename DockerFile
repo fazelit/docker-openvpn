@@ -1,7 +1,7 @@
 FROM ubuntu
 MAINTAINER fazel fouladi
 
-WORKDIR /home
+WORKDIR /root
 
 RUN apt update
 RUN apt install wget -y
@@ -11,4 +11,4 @@ RUN chmod +x openvpn-install.sh
 
 EXPOSE 1194
 
-CMD [ "bash","openvpn-install.sh" ]
+CMD [ "/bin/bash","openvpn-install.sh" ]
